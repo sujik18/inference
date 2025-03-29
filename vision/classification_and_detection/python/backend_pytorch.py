@@ -32,6 +32,8 @@ class BackendPytorch(backend.Backend):
 
     def load(self, model_path, inputs=None, outputs=None, threads=None):
         self.model = onnx.load(model_path)
+        torch.set_num_threads(threads)
+        torch.set_num_interop_threads(threads)
 
         # find inputs from the model if not passed in by config
         if inputs:
