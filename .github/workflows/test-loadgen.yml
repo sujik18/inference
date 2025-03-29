@@ -6,7 +6,7 @@ name: Test for MLPerf inference loadgen using MLC script automation
 on:
   workflow_dispatch:
   pull_request:
-    branches: [ "master", "dev" ]
+    branches: [ "master", "dev" , "**"]
     paths:
       - loadgen/**
       - .github/workflows/test-loadgen.yml
