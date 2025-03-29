@@ -24,7 +24,7 @@ class BackendPytorchNative(backend.Backend):
     def image_format(self):
         return "NCHW"
 
-    def load(self, model_path, inputs=None, outputs=None):
+    def load(self, model_path, inputs=None, outputs=None, threads=None):
         self.model = torch.load(model_path, weights_only=False)
         self.model.eval()
         # find inputs from the model if not passed in by config
