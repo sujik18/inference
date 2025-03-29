@@ -5,8 +5,16 @@ name: Test for MLPerf inference resnet50 submission generation using MLC script 
 
 on:
   workflow_dispatch:
+  push:
+    branches: [ "master", "dev", "threads--patch2"]
+    paths:
+      - vision/classification_and_detection/**
+      - loadgen/**
+      - tools/submission/**
+      - .github/workflows/test-resnet50.yml
+      - '!**.md'
   pull_request:
-    branches: [ "master", "dev"  , "threads--patch2"]
+    branches: [ "master", "dev"]
     paths:
       - vision/classification_and_detection/**
       - loadgen/**
