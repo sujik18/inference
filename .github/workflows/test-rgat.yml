@@ -1,6 +1,7 @@
 name: Test for MLPerf inference rgat submission generation using MLC script automation
 
 on:
+  workflow_dispatch:
   pull_request:
     branches: [ "master", "dev" ]
     paths:
