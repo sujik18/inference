@@ -5,15 +5,8 @@ name: Test for MLPerf inference resnet50 TVM backend using MLC script automation
 
 on:
   workflow_dispatch:
-  push:
-    branches: [ "master", "dev" , "threads--patch2"]
-    paths:
-      - vision/classification_and_detection/backend_tvm.py
-      - vision/classification_and_detection/main.py
-      - .github/workflows/test-tvm.yml
-      - '!**.md'
   pull_request:
-    branches: [ "master", "dev"]
+    branches: [ "master", "dev", "threads--patch2"]
     paths:
       - vision/classification_and_detection/backend_tvm.py
       - vision/classification_and_detection/main.py

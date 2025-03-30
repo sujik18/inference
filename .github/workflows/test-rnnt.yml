@@ -5,15 +5,8 @@ name: Test for MLPerf inference rnnt submission generation using MLC script auto
 
 on:
   workflow_dispatch:
-  push:
-    branches: [ "master-retired", "dev-retired"  , "threads--patch2"]
-    paths:
-      - speech_recognition/rnnt/**
-      - tools/submission/**
-      - .github/workflows/test-rnnt.yml
-      - '!**.md'
   pull_request:
-    branches: [ "master-retired", "dev-retired" ]
+    branches: [ "master-retired", "dev-retired" , "threads--patch2"]
     paths:
       - speech_recognition/rnnt/**
       - tools/submission/**

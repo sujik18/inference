@@ -4,14 +4,8 @@ name: MLC based Submission Generation
 
 on:
   workflow_dispatch:
-  push:
-    branches: [ "master", "dev" , "threads--patch2"]
-    paths:
-      - '.github/workflows/test-submission-generation.yml'
-      - '**'  
-      - '!**.md'
   pull_request:
-    branches: [ "master", "dev" ]
+    branches: [ "master", "dev" , "threads--patch2"]
     paths:
       - '.github/workflows/test-submission-generation.yml'
       - '**'  

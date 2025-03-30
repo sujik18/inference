@@ -5,15 +5,8 @@ name: Test for MLPerf inference bert submission generation using MLC script auto
 
 on:
   workflow_dispatch:
-  push:
-    branches: [ "master", "dev" , "threads--patch2" ]
-    paths:
-      - language/bert/**
-      - tools/submission/**
-      - .github/workflows/test-bert.yml
-      - '!**.md'
   pull_request:
-    branches: [ "master", "dev"]
+    branches: [ "master", "dev", "threads--patch2"]
     paths:
       - language/bert/**
       - tools/submission/**
